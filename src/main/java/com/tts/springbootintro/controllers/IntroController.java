@@ -1,5 +1,12 @@
 package com.tts.springbootintro.controllers;
 
-public class IntroController {
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
+@RestController
+public class IntroController {
+	@RequestMapping("/")
+	public String home() {
+		return "My very own project";
+	}
 }
